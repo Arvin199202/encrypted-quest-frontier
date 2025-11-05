@@ -198,5 +198,20 @@ contract CommunityVoting is SepoliaConfig {
         require(candidateId < NUM_CANDIDATES, "CommunityVoting: invalid candidate ID");
         return candidateNames[candidateId];
     }
+
+    /// @notice Get all candidate information
+    /// @return ids Array of candidate IDs
+    /// @return names Array of candidate names
+    function getAllCandidates() external view returns (uint8[] memory ids, string[] memory names) {
+        uint8[] memory candidateIds = new uint8[](NUM_CANDIDATES);
+        string[] memory candidateNamesArray = new string[](NUM_CANDIDATES);
+
+        for (uint8 i = 0; i < NUM_CANDIDATES; i++) {
+            candidateIds[i] = i;
+            candidateNamesArray[i] = candidateNames[i];
+        }
+
+        return (candidateIds, candidateNamesArray);
+    }
 }
 
