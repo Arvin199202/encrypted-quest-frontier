@@ -253,5 +253,23 @@ describe("CommunityVoting", function () {
 
     expect(decryptedVote).to.eq(candidateId);
   });
+
+  it("should return correct candidate names", async function () {
+    const candidate0Name = await communityVotingContract.getCandidateName(0);
+    const candidate1Name = await communityVotingContract.getCandidateName(1);
+    const candidate2Name = await communityVotingContract.getCandidateName(2);
+    const candidate3Name = await communityVotingContract.getCandidateName(3);
+
+    expect(candidate0Name).to.eq("Community Development Lead");
+    expect(candidate1Name).to.eq("Treasury Manager");
+    expect(candidate2Name).to.eq("Events Coordinator");
+    expect(candidate3Name).to.eq("Technical Advisor");
+  });
+
+  it("should revert for invalid candidate ID", async function () {
+    await expect(
+      communityVotingContract.getCandidateName(4)
+    ).to.be.revertedWith("CommunityVoting: invalid candidate ID");
+  });
 });
 
