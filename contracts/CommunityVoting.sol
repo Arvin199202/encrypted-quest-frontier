@@ -49,6 +49,14 @@ contract CommunityVoting is SepoliaConfig {
         euint32 totalVotes
     );
 
+    // Candidate names for better UX
+    string[4] public candidateNames = [
+        "Community Development Lead",
+        "Treasury Manager",
+        "Events Coordinator",
+        "Technical Advisor"
+    ];
+
     /// @notice Initialize the voting system with encrypted zeros
     constructor() {
         // Initialize all vote counts to encrypted zero
@@ -181,6 +189,14 @@ contract CommunityVoting is SepoliaConfig {
         FHE.allow(voteData.candidate3Votes, user);
         FHE.allow(voteData.candidate4Votes, user);
         FHE.allow(voteData.totalVotes, user);
+    }
+
+    /// @notice Get the name of a candidate by ID
+    /// @param candidateId The ID of the candidate (0-3)
+    /// @return The name of the candidate
+    function getCandidateName(uint8 candidateId) external view returns (string memory) {
+        require(candidateId < NUM_CANDIDATES, "CommunityVoting: invalid candidate ID");
+        return candidateNames[candidateId];
     }
 }
 
