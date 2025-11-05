@@ -57,10 +57,10 @@ const COMMUNITY_VOTING_ABI = [
 ] as const;
 
 const candidates = [
-  { id: 0, name: 'Candidate 1', color: 'primary' },
-  { id: 1, name: 'Candidate 2', color: 'secondary' },
-  { id: 2, name: 'Candidate 3', color: 'accent' },
-  { id: 3, name: 'Candidate 4', color: 'success' },
+  { id: 0, name: 'Community Development Lead', color: 'primary' },
+  { id: 1, name: 'Treasury Manager', color: 'secondary' },
+  { id: 2, name: 'Events Coordinator', color: 'accent' },
+  { id: 3, name: 'Technical Advisor', color: 'success' },
 ];
 
 const VotingArena = () => {
