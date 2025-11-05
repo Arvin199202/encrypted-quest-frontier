@@ -1,4 +1,6 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { Button } from '@/components/ui/button';
+import { BarChart3, Vote } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Header = () => {
@@ -15,6 +17,26 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => window.location.href = '/'}
+                className="flex items-center gap-2"
+              >
+                <Vote className="w-4 h-4" />
+                Vote
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => window.location.href = '/results'}
+                className="flex items-center gap-2"
+              >
+                <BarChart3 className="w-4 h-4" />
+                Results
+              </Button>
+            </div>
             <ConnectButton showBalance={false} />
           </div>
         </div>
