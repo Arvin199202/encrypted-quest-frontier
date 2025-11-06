@@ -400,6 +400,17 @@ ETHERSCAN_API_KEY=your_etherscan_api_key
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
+### Quick Start for Contributors
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/your-username/community-voting.git`
+3. Install dependencies: `npm install && cd ui && npm install`
+4. Create a feature branch: `git checkout -b feature/your-feature-name`
+5. Make your changes and test thoroughly
+6. Commit with conventional commits: `git commit -m "feat: add new feature"`
+7. Push to your fork: `git push origin feature/your-feature-name`
+8. Create a Pull Request
+
 ### Development Workflow
 
 1. Fork the repository
