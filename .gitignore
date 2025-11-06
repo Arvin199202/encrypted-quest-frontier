@@ -38,6 +38,16 @@ build/
 
 # Temporary files
 fhevmTemp/
+*.tmp
+*.temp
 
 # Hardhat network data
 hardhat-network-data/
+
+# Coverage reports
+coverage/
+coverage.json
+*.lcov
+
+# TypeScript cache
+*.tsbuildinfo
