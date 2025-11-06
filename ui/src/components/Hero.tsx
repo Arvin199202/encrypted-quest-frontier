@@ -12,6 +12,25 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Cast your encrypted vote for community committee candidates. Your vote remains private until decryption.
           </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">4</div>
+              <div className="text-sm text-muted-foreground">Candidates</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">FHE</div>
+              <div className="text-sm text-muted-foreground">Encrypted</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">1</div>
+              <div className="text-sm text-muted-foreground">Vote Per Person</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">100%</div>
+              <div className="text-sm text-muted-foreground">Privacy</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
