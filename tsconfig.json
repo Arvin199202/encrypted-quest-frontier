@@ -13,7 +13,11 @@
     "moduleResolution": "node",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["./tasks/**/*", "./test/**/*", "./deploy/**/*"],
   "exclude": ["node_modules", "dist", "ui"]
