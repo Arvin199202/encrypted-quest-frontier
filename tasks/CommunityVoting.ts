@@ -47,12 +47,12 @@ task("voting:getCounts", "Get encrypted vote counts for all candidates")
         signers[0],
       );
 
-      console.log("Decrypted Vote Counts:");
-      console.log(`Candidate 1: ${decrypted1}`);
-      console.log(`Candidate 2: ${decrypted2}`);
-      console.log(`Candidate 3: ${decrypted3}`);
-      console.log(`Candidate 4: ${decrypted4}`);
-      console.log(`Total: ${decryptedTotal}`);
+      console.log("\n📊 Decrypted Vote Counts:");
+      console.log(`├── Community Development Lead: ${decrypted1}`);
+      console.log(`├── Treasury Manager: ${decrypted2}`);
+      console.log(`├── Events Coordinator: ${decrypted3}`);
+      console.log(`└── Technical Advisor: ${decrypted4}`);
+      console.log(`\n📈 Total Votes: ${decryptedTotal}`);
     } else {
       console.log("Vote counts (encrypted):");
       console.log(`Candidate 1: ${voteCounts[0]}`);
